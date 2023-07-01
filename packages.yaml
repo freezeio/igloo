@@ -1,0 +1,23 @@
+# Example format
+# - Package: <package name>
+# - Operation: <operation>
+#
+# operation: install, no-op
+
+- Package: vim
+  Operation: install
+
+- Package: blktrace
+  Operation: install
+
+- Package: gcc
+  Operation: install
+
+- Package: sysstat
+  Operation: install
+
+- Package: atop
+  Operation: install
+  
+- Package: nvme-cli
+  Operation: install

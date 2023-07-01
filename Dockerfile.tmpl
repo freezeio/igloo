@@ -1,0 +1,12 @@
+FROM opensuse/leap:15.4
+
+# Filesystem related tools
+RUN zypper in -y \
+{{- $size := len .}}
+{{- range $id, $pkg := . }}
+    {{ $pkg -}}
+{{- if lt (add1 $id) $size }} \
+{{- end }}
+{{- end }}
+
+RUN zypper clean --all
